@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="logo">
+            <a href="#"><img src="img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Registra</a>
+            <a href="#">Reservar</a>
+            <a href="#">Salida</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+    </div>
+
+    <section class="record container">
+        <div class="record-content">
+            <h2>Registro</h2>
+            <br>
+            <form id="form_cli" action="../php/registrarCli.php" method="post">
+
+                <div class="field">
+                    <label for="name">Nombres:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="lastname">Apellidos:</label>
+                    <input type="text" name="lastname" id="lastname" required>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Numero de Celular:</label>
+                    <input type="tel" name="phone" id="phone" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+            </form>
+
+            <form id="form_veh" action="../php/registrarVeh.php" method="post">
+
+                <div class="field">
+                    <label for="placa">Placa:</label>
+                    <input type="text" name="placa" id="placa" required>
+                </div>
+    
+                <div class="field">
+                    <label for="brand">Marca:</label>
+                    <input type="text" name="brand" id="brand" >
+                </div>
+    
+                <div class="field">
+                    <label for="model">Modelo:</label>
+                    <input type="text" name="model" id="model" >
+                </div>
+    
+                <div class="field">
+                    <label for="name">Color</label>
+                    <input type="text" name="color" id="color" required>
+                </div>
+                <div class="field">
+                    <label for="name">Tipo</label>
+                    <br>
+                    <input type="radio" id="tipo" name="tipo" value="Carro">Carro
+                    <input type="radio" id="tipo" name="tipo" value="Moto">Moto
+                </div>
+            </form>
+            <br>
+
+            <button onclick="enviarFormularios()">Enviar</button>
+        </div>
+    </section>
+    
+
+
+    <br>
+</body>
+
+</html>
