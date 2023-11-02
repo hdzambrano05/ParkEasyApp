@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Ingreso de Vehiculo</title>
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/main.js"></script>
 </head>
@@ -13,7 +13,7 @@
 
     <div class="head">
         <div class="logo">
-            <a href="#"><img src="img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
+            <a href="#"><img src="../css/img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
         </div>
         <nav class="navbar">
             <a href="#">Inicio</a>
@@ -29,7 +29,7 @@
             <h2>Listado de Reservas</h2>
             <br>
             <div class="btn-1" align="right">
-                <a href="">Ingreso de Vehiculo</a>
+                <a href="../pages/enter_vehicle.html">Ingreso de Vehiculo</a>
                 <a href="">Salida de Vehiculo</a>
             </div>
             <br>
