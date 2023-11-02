@@ -129,3 +129,84 @@ button {
     color: white;
     transition: 0.3s;
   }
+
+  .reserve-content{
+    margin-top: 100px;
+  }
+
+  .reserve-content h2{
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .reserve-content .btn-1 a{
+    padding: 18px 25px;
+    background-color: #3F3456;
+    border-radius: 25px;
+    margin-right: 10px;
+    color: #ffff;
+    font-size: 17px;
+  }
+
+  .reserve-content .btn-1 a:hover{
+    background-color: #ff5a2c;
+    cursor: pointer;
+  }
+
+
+   table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    margin-top: 25px;
+  }
+  
+   td,th {
+    padding: 8px;
+    text-align: center;
+  }
+  
+   tr:nth-child(even) {
+    background-color: #3F3456;
+  }
+  
+   tr:hover {
+    background: #3F3456;
+    transition: all 0.1s ease-in-out;
+  }
+  
+   th:first-child {
+    border-radius: 6px 0 0 0;
+  }
+  
+   th:last-child {
+    border-radius: 0 6px 0 0;
+  }
+  
+   th:only-child {
+    border-radius: 6px 6px 0 0;
+  }
+  
+   th {
+    background-color: #ff5a2c;
+    color: white;
+  }
+
+  td a{
+    padding: 10px 15px;
+    background-color: #ff5a2c;
+    border: 0;
+    margin-top: 2px;
+    border-radius: 25px;
+    color: #ffff;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  td a:hover{
+  background-color: #3F3456;
+  cursor: pointer;
+  }
