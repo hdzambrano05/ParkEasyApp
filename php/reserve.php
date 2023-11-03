@@ -29,7 +29,7 @@
             <h2>Listado de Reservas</h2>
             <br>
             <div class="btn-1" align="right">
-                <a href="../pages/enter_vehicle.html">Ingreso de Vehiculo</a>
+                <a href="enter_vehicle.php">Ingreso de Vehiculo</a>
                 <a href="">Salida de Vehiculo</a>
             </div>
             <br>
