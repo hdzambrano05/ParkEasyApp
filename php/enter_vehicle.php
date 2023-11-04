@@ -16,7 +16,7 @@
         </div>
         <nav class="navbar">
             <a href="#">Inicio</a>
-            <a href="../pages/record.html">Registra</a>
+            <a href="../pages/record_user.html">Registra</a>
             <a href="reserve.php">Reservar</a>
             <a href="#">Espacios</a>
             <a href="#">Contactos</a>

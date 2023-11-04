@@ -17,19 +17,23 @@
         </div>
         <nav class="navbar">
             <a href="#">Inicio</a>
-            <a href="record.html">Registra</a>
+            <a href="record_user.html">Registar Usuario</a>
             <a href="../php/reserve.php">Reservar</a>
             <a href="#">Espacios</a>
             <a href="#">Contactos</a>
         </nav>
     </div>
-    </div>
 
     <section class="record container">
         <div class="record-content">
-            <h2>Registro</h2>
+            <h2>Registro Cliente</h2>
             <br>
             <form id="form_cli" action="../php/registrarCli.php" method="post">
+
+                <div class="field">
+                    <label for="cedula">Cedula</label>
+                    <input type="text" name="cedula" id="cedula" required>
+                </div>
 
                 <div class="field">
                     <label for="name">Nombres:</label>
@@ -51,43 +55,12 @@
                     <input type="email" name="email" id="email" required>
                 </div>
 
-            </form>
 
-            <form id="form_veh" action="../php/registrarVeh.php" method="post">
-
-                <div class="field">
-                    <label for="placa">Placa:</label>
-                    <input type="text" name="placa" id="placa" required>
-                </div>
-    
-                <div class="field">
-                    <label for="brand">Marca:</label>
-                    <input type="text" name="brand" id="brand" >
-                </div>
-    
-                <div class="field">
-                    <label for="model">Modelo:</label>
-                    <input type="text" name="model" id="model" >
-                </div>
-    
-                <div class="field">
-                    <label for="name">Color</label>
-                    <input type="text" name="color" id="color" required>
-                </div>
-                <div class="field">
-                    <label for="name">Tipo</label>
-                    <br>
-                    <input type="radio" id="tipo" name="tipo" value="Carro">Carro
-                    <input type="radio" id="tipo" name="tipo" value="Moto">Moto
-                </div>
             </form>
             <br>
-
             <button onclick="enviarFormularios()">Enviar</button>
         </div>
-    </section>
-    
-    <br>
+    </section>    
 </body>
 
 </html>

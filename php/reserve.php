@@ -16,8 +16,8 @@
             <a href="#"><img src="../css/img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
         </div>
         <nav class="navbar">
-            <a href="#">Inicio</a>
-            <a href="../pages/record.html">Registra</a>
+        <a href="#">Inicio</a>
+            <a href="../pages/record_user.html">Registra</a>
             <a href="reserve.php">Reservar</a>
             <a href="#">Espacios</a>
             <a href="#">Contactos</a>
@@ -29,6 +29,7 @@
             <h2>Listado de Reservas</h2>
             <br>
             <div class="btn-1" align="right">
+            <a href="../pages/record_vehicle.htm">Registrar Vehiculo</a>
                 <a href="enter_vehicle.php">Ingreso de Vehiculo</a>
                 <a href="">Salida de Vehiculo</a>
             </div>
