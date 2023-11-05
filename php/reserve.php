@@ -17,7 +17,7 @@
         </div>
         <nav class="navbar">
         <a href="#">Inicio</a>
-            <a href="../pages/record_user.html">Registra</a>
+            <a href="../pages/record_user.html">Registra Usuario</a>
             <a href="reserve.php">Reservar</a>
             <a href="#">Espacios</a>
             <a href="#">Contactos</a>
@@ -30,7 +30,7 @@
             <br>
             <div class="btn-1" align="right">
             <a href="../pages/record_vehicle.htm">Registrar Vehiculo</a>
-                <a href="enter_vehicle.php">Ingreso de Vehiculo</a>
+                <a href="../pages/enter_vehicle.html">Entrada de Vehiculo</a>
                 <a href="">Salida de Vehiculo</a>
             </div>
             <br>
@@ -38,7 +38,7 @@
                 <thead>
                     <tr>
                         <th>Id Reservas</th>
-                        <th>Id Cliente</th>
+                        <th>Cedula Cliente</th>
                         <th>Placa del Vehiculo</th>
                         <th>Fecha de Ingreso</th>
                         <th>Hora de Ingreso</th>
@@ -60,7 +60,7 @@
                         while($row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$row["ID_Reserva"]."</td>";
-                            echo "<td>".$row["ID_Cliente"]."</td>";
+                            echo "<td>".$row["Cedula_Cliente"]."</td>";
                             echo "<td>".$row["Placa_Vehiculo"]."</td>";
                             echo "<td>".$row["Fecha_Inicio"]."</td>";
                             echo "<td>".$row["Hora_Inicio"]."</td>";

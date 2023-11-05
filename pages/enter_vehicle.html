@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/validarPlaca.js"></script>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="logo">
+            <a href="#"><img src="img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="pages/record_user.html">Registra Usuario</a>
+            <a href="php/reserve.php">Reservar</a>
+            <a href="#">Espacios</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+
+    <section class="record container">
+        <div class="record-content">
+            <h2>Ingreso de Vehiculos</h2>
+            <br>
+
+            <form id="form_veh" action="../php/enterVehicle.php" method="post">
+
+                <div class="field">
+                    <label for="cedula">Cedula:</label>
+                    <input type="text" name="cedula" id="cedula" readonly>
+                </div>
+
+                <div class="field">
+                    <label for="placa">Placa:</label>
+                    <input type="text" name="placa" id="placa" required>
+                    <button type="button" onclick="validarPlaca()">Validar Placa</button>
+                </div>
+
+                <div class="field">
+                    <label for="date">Fecha de ingreso:</label>
+                    <input type="date" name="date" id="date">
+                </div>
+
+                <div class="field">
+                    <label for="time">Hora de ingreso</label>
+                    <input type="time" name="time" id="time" required>
+                </div>
+                
+            </form>
+            <br>
+
+            <button type="button" onclick="enviarFormularios()">Enviar</button>
+        </div>
+    </section>
+
+    <br>
+</body>
+
+</html>

@@ -1,3 +1,22 @@
+function validarPlaca() {
+    var placa = document.getElementById('placa').value;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.Cedula) {
+                    document.getElementById('cedula').value = response.Cedula;
+                } else {
+                    alert("La placa no existe en la base de datos.");
+                }
+            }
+        }
+    };
+    xhr.open('GET', '../php/validarPlaca.php?placa=' + placa, true);
+    xhr.send();
+}
+
 function enviarFormularios() {
     var formVehiculo = document.getElementById("form_veh");
 
@@ -25,11 +44,12 @@ function enviarFormularios() {
             if (xhrVehiculo.status == 200) {
                 // Manejar la respuesta si es necesario
                 var response = xhrVehiculo.responseText;
-                if (response.includes("ya existe")) {
-                    alert("La placa ya está registrada. Ingresa una placa diferente.");
-                } else {
+                alert(response); // Esto muestra el mensaje de PHP
+                if (response.includes("Nuevo registro creado correctamente")) {
                     alert("Vehículo agregado correctamente");
                     formVehiculo.reset(); // Reiniciar campos del formulario
+                } else {
+                    alert("Error al agregar vehículo");
                 }
             } else {
                 // Manejar errores si es necesario
@@ -41,3 +61,4 @@ function enviarFormularios() {
     xhrVehiculo.open("POST", formVehiculo.action, true);
     xhrVehiculo.send(formDataVehiculo);
 }
+
