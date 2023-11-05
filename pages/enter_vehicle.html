@@ -18,7 +18,7 @@
         <nav class="navbar">
             <a href="#">Inicio</a>
             <a href="pages/record_user.html">Registra Usuario</a>
-            <a href="php/reserve.php">Reservar</a>
+            <a href="../php/reserve.php">Reservar</a>
             <a href="#">Espacios</a>
             <a href="#">Contactos</a>
         </nav>
@@ -51,7 +51,16 @@
                     <label for="time">Hora de ingreso</label>
                     <input type="time" name="time" id="time" required>
                 </div>
+
+                <div class="field">
+                    <label for="space">Numero del Espacio</label>
+                    <input type="text" name="space" id="space" required>
+                </div>
                 
+                <div class="field">
+                    <label for="state">Estado</label>
+                    <input type="text" name="state" id="state" value="Ocupado" readonly>
+                </div>
             </form>
             <br>
 
