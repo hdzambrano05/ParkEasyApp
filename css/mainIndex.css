@@ -246,7 +246,7 @@
   .slider-frame {
     border-radius: 5px;
     width: 55vw;
-    height: 90vh;
+    height: 100vh;
     margin: 50px auto 0;
     overflow: hidden;
   }
@@ -274,7 +274,7 @@
     text-align: justify;
   color: white;
   padding: 10px;
-  font-size: 25px;
+  font-size: 20px;
   }
   
   .li1 h3{
@@ -294,7 +294,7 @@
     text-align: justify;
   color: white;
   padding: 10px;
-  font-size: 25px;
+  font-size: 20px;
     }
     
     .li2 h3{
@@ -314,7 +314,7 @@
     text-align: justify;
   color: white;
   padding: 10px;
-  font-size: 25px;
+  font-size: 20px;
     }
     
     .li3 h3{
@@ -334,7 +334,7 @@
     text-align: justify;
   color: white;
   padding: 10px;
-  font-size: 25px;
+  font-size: 20px;
     }
     
     .li4 h3{

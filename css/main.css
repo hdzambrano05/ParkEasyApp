@@ -115,8 +115,8 @@ button {
     margin-top: 30px;
     width: 290px;
     height: 40px;
-    border-radius: 5px;
-    background: palevioletred;
+    border-radius: 15px;
+    background: #ff5a2c;
     color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -124,8 +124,8 @@ button {
   
    button:hover{
     font-size: 15px;
-    background-color:rgb(218, 123, 155);
-    border: #812DB7 1px solid;
+    background-color:rgb(245, 128, 61);
+    border: #ff5a2c 1px solid;
     color: white;
     transition: 0.3s;
   }

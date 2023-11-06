@@ -67,13 +67,14 @@ body{
 }
 
 .title {
-    padding: 100px;
+    padding: 80px;
     display: flex;
     justify-content: center;
 }
 .title-content h1{
     color: aliceblue;
     text-transform: uppercase;
+    font-size: 50px;
 }
 
 

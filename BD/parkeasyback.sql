@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2023 a las 03:52:45
+-- Tiempo de generación: 06-11-2023 a las 22:54:49
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -51,10 +51,38 @@ INSERT INTO `clientes` (`Cedula`, `Nombre`, `Apellido`, `Telefono`, `CorreoElect
 --
 
 CREATE TABLE `espaciosparqueo` (
-  `Numero_Espacio` varchar(10) NOT NULL,
-  `Tipo` varchar(20) DEFAULT NULL,
-  `Disponible` tinyint(1) DEFAULT NULL
+  `Numero_Espacio` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `espaciosparqueo`
+--
+
+INSERT INTO `espaciosparqueo` (`Numero_Espacio`) VALUES
+('A101'),
+('A102'),
+('A103'),
+('A104'),
+('A105'),
+('A106'),
+('A107'),
+('A108'),
+('A109'),
+('A110'),
+('A111'),
+('A112'),
+('B201'),
+('B202'),
+('B203'),
+('B204'),
+('B205'),
+('B206'),
+('B207'),
+('B208'),
+('B209'),
+('B210'),
+('B211'),
+('B212');
 
 -- --------------------------------------------------------
 
@@ -70,9 +98,16 @@ CREATE TABLE `reservas` (
   `Hora_Inicio` time DEFAULT NULL,
   `Fecha_Final` date DEFAULT NULL,
   `Hora_Final` time DEFAULT NULL,
-  `Numero_Espacio` varchar(10) DEFAULT NULL,
-  `Estado` varchar(20) DEFAULT NULL
+  `Numero_Espacio` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`ID_Reserva`, `Cedula_Cliente`, `Placa_Vehiculo`, `Fecha_Inicio`, `Hora_Inicio`, `Fecha_Final`, `Hora_Final`, `Numero_Espacio`) VALUES
+(26, '1004191801', 'SBW78G', '2023-11-15', '17:16:00', NULL, NULL, 'A109'),
+(28, '1004232350', 'atv20f', '2023-11-23', '16:54:00', NULL, NULL, 'B205');
 
 -- --------------------------------------------------------
 
@@ -93,7 +128,8 @@ CREATE TABLE `vehiculos` (
 
 INSERT INTO `vehiculos` (`Placa`, `Color`, `Tipo`, `Cedula`) VALUES
 ('atv20f', 'gris', 'Moto', '1004232350'),
-('atv20fs', 'gris', 'Carro', '1004232350');
+('atv20fs', 'gris', 'Carro', '1004232350'),
+('SBW78G', 'negro', 'Moto', '1004191801');
 
 --
 -- Índices para tablas volcadas
@@ -135,7 +171,7 @@ ALTER TABLE `vehiculos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `ID_Reserva` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restricciones para tablas volcadas

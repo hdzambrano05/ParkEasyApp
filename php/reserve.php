@@ -13,10 +13,10 @@
 
     <div class="head">
         <div class="logo">
-            <a href="#"><img src="../css/img/LogoParkEasy.png" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
+            <a href="#"><img src="../css/img/LogoParkEasy.jpg" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
         </div>
         <nav class="navbar">
-        <a href="#">Inicio</a>
+            <a href="../index.html">Inicio</a>
             <a href="../pages/record_user.html">Registra Usuario</a>
             <a href="reserve.php">Reservar</a>
             <a href="../pages/spaceVehicle.html">Espacios</a>
