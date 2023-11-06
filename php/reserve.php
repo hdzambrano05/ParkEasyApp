@@ -19,7 +19,7 @@
         <a href="#">Inicio</a>
             <a href="../pages/record_user.html">Registra Usuario</a>
             <a href="reserve.php">Reservar</a>
-            <a href="#">Espacios</a>
+            <a href="../pages/spaceVehicle.html">Espacios</a>
             <a href="#">Contactos</a>
         </nav>
     </div>
