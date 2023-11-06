@@ -6,10 +6,9 @@ $placa = $_POST['placa'];
 $fechaI = $_POST['date'];
 $horaI = $_POST['time'];
 $espacio = $_POST['space'];
-$estado =  $_POST['state'];
 
 
-$sql = "INSERT INTO reservas (Cedula_Cliente, Placa_Vehiculo, Fecha_Inicio, Hora_Inicio, Fecha_Final, Hora_Final, Numero_Espacio, Estado) VALUES ('$cedula', '$placa', '$fechaI', '$horaI', null , null, '$espacio', '$estado')";
+$sql = "INSERT INTO reservas (Cedula_Cliente, Placa_Vehiculo, Fecha_Inicio, Hora_Inicio, Fecha_Final, Hora_Final, Numero_Espacio) VALUES ('$cedula', '$placa', '$fechaI', '$horaI', null , null, '$espacio')";
 
 $result = $conn->query($sql);
 

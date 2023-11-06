@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso de Vehiculo</title>
+    <title>Reservas del Vehiculos</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/main.js"></script>
+    <script src="../js/eliminarReserva.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,6 @@
                         <th>Hora de Ingreso</th>
                         <th>Fecha de Salida</th>
                         <th>Hora de salida</th>
-                        <th>Estado</th>
                         <th>Espacio</th>
                         <th>Acciones</th>
                     </tr>
@@ -66,11 +65,11 @@
                             echo "<td>".$row["Hora_Inicio"]."</td>";
                             echo "<td>".$row["Fecha_Final"]."</td>";
                             echo "<td>".$row["Hora_Final"]."</td>";
-                            echo "<td>".$row["Estado"]."</td>";
                             echo "<td>".$row["Numero_Espacio"]."</td>";
                             echo "<td>
-                                <a href='' >Editar</a>
-                                <a href=''>Eliminar</a>
+                            <a href='' >Editar</a>
+                            <a href='#' onclick='eliminarReserva(".$row["ID_Reserva"].")'>Eliminar</a>
+                            <a href='' >Pagar</a>
                                 </td>";
                             echo "</tr>";
                         }
