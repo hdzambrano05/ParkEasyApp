@@ -17,6 +17,25 @@ function validarPlaca() {
     xhr.send();
 }
 
+function validarEspacio() {
+    var espacio = document.getElementById('space').value;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            if (xhr.status == 200) {
+                var response = xhr.responseText;
+                if (response.includes("El espacio ya está reservado")) {
+                    alert("El espacio ya está reservado.");
+                } else {
+                    enviarFormularios();
+                }
+            }
+        }
+    };
+    xhr.open('GET', '../php/enterVehicle.php?espacio=' + espacio, true);
+    xhr.send();
+}
+
 function enviarFormularios() {
     var formVehiculo = document.getElementById("form_veh");
 
@@ -61,4 +80,3 @@ function enviarFormularios() {
     xhrVehiculo.open("POST", formVehiculo.action, true);
     xhrVehiculo.send(formDataVehiculo);
 }
-
