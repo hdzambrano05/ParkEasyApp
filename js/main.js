@@ -1,6 +1,20 @@
 function enviarFormularios() {
     var formCliente = document.getElementById("form_cli");
 
+    // Verificar si algún campo está vacío
+    var inputs = formCliente.querySelectorAll('input[type="text"]');
+    var isEmpty = false;
+    inputs.forEach(function(input) {
+        if (input.value.trim() === '') {
+            isEmpty = true;
+        }
+    });
+
+    if (isEmpty) {
+        alert("Por favor completa todos los campos.");
+        return;
+    }
+
     var formDataCliente = new FormData(formCliente);
 
     var xhrCliente = new XMLHttpRequest();
