@@ -42,12 +42,12 @@ function enviarFormularios() {
     xhrVehiculo.onreadystatechange = function() {
         if (xhrVehiculo.readyState == XMLHttpRequest.DONE) {
             if (xhrVehiculo.status == 200) {
-                // Manejar la respuesta si es necesario
+                
                 var response = xhrVehiculo.responseText;
-                alert(response); // Esto muestra el mensaje de PHP
+                alert(response); 
                 if (response.includes("Nuevo registro creado correctamente")) {
                     alert("Vehículo agregado correctamente");
-                    formVehiculo.reset(); // Reiniciar campos del formulario
+                    formVehiculo.reset(); 
                 } else {
                     alert("Error al agregar vehículo");
                 }

@@ -23,7 +23,7 @@ function enviarFormularios() {
     xhrVehiculo.onreadystatechange = function() {
         if (xhrVehiculo.readyState == XMLHttpRequest.DONE) {
             if (xhrVehiculo.status == 200) {
-                // Manejar la respuesta si es necesario
+                
                 var response = xhrVehiculo.responseText;
                 if (response.includes("ya existe")) {
                     alert("La placa ya está registrada. Ingresa una placa diferente.");

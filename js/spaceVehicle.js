@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    setInterval(actualizarEspacios, 1000); // Realizar actualización cada 5 segundos (5000 milisegundos)
+    setInterval(actualizarEspacios, 1000); 
 });
