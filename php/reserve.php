@@ -31,7 +31,7 @@
             <div class="btn-1" align="right">
             <a href="../pages/record_vehicle.htm">Registrar Vehiculo</a>
                 <a href="../pages/enter_vehicle.html">Entrada de Vehiculo</a>
-                <a href="">Salida de Vehiculo</a>
+                <a href="../pages/exit_vehicle.html">Salida de Vehiculo</a>
             </div>
             <br>
             <table>
@@ -41,9 +41,7 @@
                         <th>Cedula Cliente</th>
                         <th>Placa del Vehiculo</th>
                         <th>Fecha de Ingreso</th>
-                        <th>Hora de Ingreso</th>
                         <th>Fecha de Salida</th>
-                        <th>Hora de salida</th>
                         <th>Espacio</th>
                         <th>Acciones</th>
                     </tr>
@@ -52,7 +50,7 @@
                     <?php
                     include 'conexion.php';
 
-                    $sql = "SELECT * FROM reservas";
+                    $sql = "SELECT * FROM reservas ORDER BY ID_Reserva DESC";
                     $result = $conn->query($sql);
 
                     if ($result->num_rows > 0) {
@@ -62,12 +60,10 @@
                             echo "<td>".$row["Cedula_Cliente"]."</td>";
                             echo "<td>".$row["Placa_Vehiculo"]."</td>";
                             echo "<td>".$row["Fecha_Inicio"]."</td>";
-                            echo "<td>".$row["Hora_Inicio"]."</td>";
                             echo "<td>".$row["Fecha_Final"]."</td>";
-                            echo "<td>".$row["Hora_Final"]."</td>";
                             echo "<td>".$row["Numero_Espacio"]."</td>";
                             echo "<td>
-                            <a href='' >Editar</a>
+                            <a href='modificar.php?id=" . $row["ID_Reserva"] . "'>Modificar</a>
                             <a href='#' onclick='eliminarReserva(".$row["ID_Reserva"].")'>Eliminar</a>
                             <a href='' >Pagar</a>
                                 </td>";

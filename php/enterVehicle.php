@@ -4,7 +4,6 @@ include 'conexion.php';
 $cedula = $_POST['cedula'];
 $placa = $_POST['placa'];
 $fechaI = $_POST['date'];
-$horaI = $_POST['time'];
 $espacio = $_POST['space'];
 
 // Verificar si el espacio ya está en uso
@@ -16,7 +15,7 @@ if ($result_verificar->num_rows > 0) {
     echo "Error: El espacio ya está reservado.";
 } else {
     // Si no hay resultados, se puede proceder con la inserción
-    $sql = "INSERT INTO reservas (Cedula_Cliente, Placa_Vehiculo, Fecha_Inicio, Hora_Inicio, Fecha_Final, Hora_Final, Numero_Espacio) VALUES ('$cedula', '$placa', '$fechaI', '$horaI', null , null, '$espacio')";
+    $sql = "INSERT INTO reservas (Cedula_Cliente, Placa_Vehiculo, Fecha_Inicio, Fecha_Final, Numero_Espacio) VALUES ('$cedula', '$placa', '$fechaI', null, '$espacio')";
 
     $result = $conn->query($sql);
 

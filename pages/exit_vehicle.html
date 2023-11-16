@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrad de Vehiculo</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/exitVehicle.js"></script>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="logo">
+            <a href="#"><img src="../css/img/LogoParkEasy.jpg" alt="ParkEasy" title="ParkEasy" width="60" height="50"></a>
+        </div>
+        <nav class="navbar">
+            <a href="../index.html">Inicio</a>
+            <a href="record_user.html">Registra Usuario</a>
+            <a href="../php/reserve.php">Reservar</a>
+            <a href="spaceVehicle.html">Espacios</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </div>
+
+    <section class="record container">
+        <div class="record-content">
+            <h2>Salida de Vehiculos</h2>
+            <br>
+
+            <form id="form_veh" action="../php/exitVehicle.php" method="post">
+
+                <div class="field">
+                    <label for="placa">Placa</label>
+                    <input type="text" name="placa" id="placa" >
+                </div>
+
+                <div class="field">
+                    <label for="dateEnd">Fecha de Salida</label>
+                    <input type="datetime-local" name="dateEnd" id="dateEnd" required>
+                </div>
+                <button type="button" onclick="enviarFormularios()">Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
