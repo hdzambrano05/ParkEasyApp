@@ -7,6 +7,7 @@ function validarPlaca() {
                 var response = JSON.parse(xhr.responseText);
                 if (response.Cedula) {
                     document.getElementById('cedula').value = response.Cedula;
+                    document.getElementById('tipo').value = response.Tipo; // Nuevo: Mostrar el tipo de vehículo
                 } else {
                     alert("La placa no existe en la base de datos.");
                 }
@@ -16,6 +17,7 @@ function validarPlaca() {
     xhr.open('GET', '../php/validarPlaca.php?placa=' + placa, true);
     xhr.send();
 }
+
 
 function validarEspacio() {
     var espacio = document.getElementById('space').value;

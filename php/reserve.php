@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas del Vehiculos</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script src="../js/eliminarReserva.js"></script>
+    <script src="../js/reserve.js"></script>
 </head>
 
 <body>
@@ -40,6 +40,7 @@
                         <th>Id Reservas</th>
                         <th>Cedula Cliente</th>
                         <th>Placa del Vehiculo</th>
+                        <th>Tipo de Vehiculo</th>
                         <th>Fecha de Ingreso</th>
                         <th>Fecha de Salida</th>
                         <th>Espacio</th>
@@ -59,13 +60,14 @@
                             echo "<td>".$row["ID_Reserva"]."</td>";
                             echo "<td>".$row["Cedula_Cliente"]."</td>";
                             echo "<td>".$row["Placa_Vehiculo"]."</td>";
+                            echo "<td>".$row["Tipo_Vehiculo"]."</td>";
                             echo "<td>".$row["Fecha_Inicio"]."</td>";
                             echo "<td>".$row["Fecha_Final"]."</td>";
                             echo "<td>".$row["Numero_Espacio"]."</td>";
                             echo "<td>
                             <a href='modificar.php?id=" . $row["ID_Reserva"] . "'>Modificar</a>
                             <a href='#' onclick='eliminarReserva(".$row["ID_Reserva"].")'>Eliminar</a>
-                            <a href='' >Pagar</a>
+                            <a href='#' onclick='pagarReserva(".$row["ID_Reserva"].", \"".$row["Tipo_Vehiculo"]."\")'>Pagar</a>
                                 </td>";
                             echo "</tr>";
                         }
