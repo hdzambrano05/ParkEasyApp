@@ -12,12 +12,33 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
 
-    $precioBase = ($tipoVehiculo == 'carro') ? 2000 : 1500;
-    
-    // Calcular las horas adicionales considerando 30 minutos como una hora adicional
-    $horasAdicionales = ceil((strtotime($row['Fecha_Final']) - strtotime($row['Fecha_Inicio']) + 1800) / 3600) - 1;
+    $precioPrimeraHoraCarro = 2000;
+    $precioHorasAdicionalesCarro = 1000;
 
-    $totalPagar = $precioBase + $horasAdicionales * (($tipoVehiculo == 'carro') ? 1000 : 500);
+    $precioPrimeraHoraMoto = 1500;
+    $precioHorasAdicionalesMoto = 500;
+
+    // Obtener la fecha y hora de inicio y fin como objetos DateTime
+    $fechaInicio = new DateTime($row['Fecha_Inicio']);
+    $fechaFinal = new DateTime($row['Fecha_Final']);
+
+    // Calcular las horas adicionales considerando 30 minutos como una hora adicional
+    $intervalo = $fechaInicio->diff($fechaFinal);
+    $totalHoras = $intervalo->h;
+    $totalHoras += ($intervalo->i >= 30) ? 1 : 0;
+
+    if ($tipoVehiculo == 'Carro') {
+        $precioPrimeraHora = $precioPrimeraHoraCarro;
+        $precioHorasAdicionales = $precioHorasAdicionalesCarro;
+    } elseif ($tipoVehiculo == 'Moto') {
+        $precioPrimeraHora = $precioPrimeraHoraMoto;
+        $precioHorasAdicionales = $precioHorasAdicionalesMoto;
+    } else {
+        echo "Tipo de vehículo no válido.";
+        exit;
+    }
+
+    $totalPagar = $precioPrimeraHora + max(0, $totalHoras - 1) * $precioHorasAdicionales;
 
     // Carpeta donde se guardarán los PDFs
     $carpetaFacturas = 'facturas/';
@@ -40,17 +61,14 @@ if ($result->num_rows == 1) {
     $pdf->Ln(); // Salto de línea
     $pdf->Cell(40, 10, 'ID Reserva: ' . $idReserva);
     $pdf->Cell(40, 10, 'Cedula Cliente: ' . $row['Cedula_Cliente']);
-    
-    // Agregar más espacio o un salto de línea aquí
-    $pdf->Ln(10); // Puedes ajustar el valor según tu preferencia
-
+    $pdf->Ln(10); // Salto de línea
     $pdf->Cell(40, 10, 'Total a Pagar: $' . $totalPagar);
 
     $pdf->Output($pdfFileName, 'F'); // Guardar el PDF en la carpeta "facturas"
 
-    // Mostrar la factura
-    $response = "Factura generada correctamente.\n\nMonto a Pagar: $" . $totalPagar . "\nSe ha guardado como: " . $pdfFileName;
-    echo $response;
+    // Mostrar la notificación con la diferencia en horas, el total a pagar y la confirmación de guardado
+    echo "Diferencia en horas: " . $totalHoras . " horas\n";
+    echo "Monto a Pagar: $" . $totalPagar . "\nSe ha guardado correctamente.";
 
 } else {
     echo "Reserva no encontrada.";

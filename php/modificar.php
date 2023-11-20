@@ -24,9 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['id'])) {
         </head>
 
         <body>
-            <div class="head">
-                <!-- Tu código para la barra de navegación -->
-            </div>
+    
 
             <section class="reserve container">
                 <div class="reserve-content">

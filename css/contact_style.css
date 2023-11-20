@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    background-color: #1b1726;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo{
+    margin-left: 30px;
+
+}
+.logo a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.logo img{
+    border-radius: 5px;
+}
+
+.navbar{
+    display: flex;
+    margin-right: 10px;
+}
+.navbar a{
+    display: block;
+    padding: 10px 10px;
+    color: aliceblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.navbar a:hover{
+    background: #3F3456;
+    border-radius: 15px;
+    box-shadow: inset 0 0 20px rgba(132, 90, 185, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(176, 75, 243, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    
+}
+
+.main-contact{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 70vw;
+    height: 75vh;
+    border-radius: 10px;
+    box-shadow: black 8px 8px 15px 1px;
+    transition: 0.5s;
+    margin: auto;
+}
+
+
+.fondo{
+    width: 35vw;
+    height: 75vh;
+    border-radius: 10px 0px 0px 10px;
+    background: linear-gradient(rgba(255, 66, 239, 0.1),rgba(255, 0, 0, 0.1)),
+    url(../css/img/troy-t-YoGzQqqWZP0-unsplash.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    place-items: center
+}
+
+.form{
+    width: 35vw;
+    height: 75vh;
+    background-color:#2a223a;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+h1{
+    font-size:4rem ;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    color:white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.FB{
+    width: 35vw;
+    height: 18vh;
+    background-color: #3b5998;
+    margin-top: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    place-items: center
+
+}
+
+.FB:hover{
+    background-color:#2a4172;
+    transition: 0.5s;
+    box-shadow: black 8px 8px 15px 1px;
+}
+
+.FB h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    color:white;
+    margin-left: 30px;
+}
+
+.YT{
+    width: 35vw;
+    height: 18vh;
+    background-color: #c4302b;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    place-items: center
+}
+
+.YT:hover{
+    background-color:#7f2522;
+    transition: 0.5s;
+    box-shadow: black 8px 8px 15px 1px;
+}
+
+.YT h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    color:white;
+    margin-left: 30px;
+}
+
+.TT{
+    width: 35vw;
+    height: 18vh;
+    background-color: #00acee;
+    border-radius: 5px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    place-items: center
+}
+
+.TT:hover{
+    background-color:#0373a0;
+    transition: 0.5s;
+    box-shadow: black 8px 8px 15px 1px;
+}
+
+.TT h3{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    color:white;
+    margin-left: 30px;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
