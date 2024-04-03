@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 22:54:49
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 03-04-2024 a las 22:21:27
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `parkeasyback`
+-- Base de datos: `parkeasy`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,8 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`Cedula`, `Nombre`, `Apellido`, `Telefono`, `CorreoElectronico`) VALUES
 ('1004191801', 'Jeison', 'Maigual', '3234724931 ', 'jeison@hotmail.com'),
 ('1004232350', 'harold', 'zambrano', '3207202294 ', 'harold1299@hotmail.com'),
-('10042323502', 'harold', 'zambrano', '3207202294 ', 'harold1299@hotmail.com');
+('10042323502', 'harold', 'zambrano', '3207202294 ', 'harold1299@hotmail.com'),
+('10042323503', 'Anderson ', ' Santiago', '3156548148 ', 'fernandoarteaga069@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -94,10 +95,9 @@ CREATE TABLE `reservas` (
   `ID_Reserva` int(11) NOT NULL,
   `Cedula_Cliente` varchar(15) DEFAULT NULL,
   `Placa_Vehiculo` varchar(10) DEFAULT NULL,
-  `Fecha_Inicio` date DEFAULT NULL,
-  `Hora_Inicio` time DEFAULT NULL,
-  `Fecha_Final` date DEFAULT NULL,
-  `Hora_Final` time DEFAULT NULL,
+  `Tipo_Vehiculo` varchar(10) DEFAULT NULL,
+  `Fecha_Inicio` datetime DEFAULT NULL,
+  `Fecha_Final` datetime DEFAULT NULL,
   `Numero_Espacio` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -105,9 +105,9 @@ CREATE TABLE `reservas` (
 -- Volcado de datos para la tabla `reservas`
 --
 
-INSERT INTO `reservas` (`ID_Reserva`, `Cedula_Cliente`, `Placa_Vehiculo`, `Fecha_Inicio`, `Hora_Inicio`, `Fecha_Final`, `Hora_Final`, `Numero_Espacio`) VALUES
-(26, '1004191801', 'SBW78G', '2023-11-15', '17:16:00', NULL, NULL, 'A109'),
-(28, '1004232350', 'atv20f', '2023-11-23', '16:54:00', NULL, NULL, 'B205');
+INSERT INTO `reservas` (`ID_Reserva`, `Cedula_Cliente`, `Placa_Vehiculo`, `Tipo_Vehiculo`, `Fecha_Inicio`, `Fecha_Final`, `Numero_Espacio`) VALUES
+(29, '1004232350', 'atv20f', 'Moto', '2024-04-03 15:15:00', '2024-04-03 19:15:00', 'A106'),
+(30, '10042323503', 'atv42', 'Moto', '2024-04-03 15:20:00', NULL, 'A103');
 
 -- --------------------------------------------------------
 
@@ -129,6 +129,7 @@ CREATE TABLE `vehiculos` (
 INSERT INTO `vehiculos` (`Placa`, `Color`, `Tipo`, `Cedula`) VALUES
 ('atv20f', 'gris', 'Moto', '1004232350'),
 ('atv20fs', 'gris', 'Carro', '1004232350'),
+('atv42', 'negro', 'Moto', '10042323503'),
 ('SBW78G', 'negro', 'Moto', '1004191801');
 
 --
@@ -171,7 +172,7 @@ ALTER TABLE `vehiculos`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `ID_Reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `ID_Reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Restricciones para tablas volcadas
